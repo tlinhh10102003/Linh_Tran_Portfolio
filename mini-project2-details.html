@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project: Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
+</head>
+<body>
+    <nav id="prj-details">
+        <div class="name">Mini Project: Rock-Paper-Scissor</div>
+        <div class="home">
+            <img 
+                src="./assets/home.png" 
+                alt="home-icon" 
+                class="icon" 
+                onclick="location.href='./index.html'"
+            />
+        </div>
+    </nav>
+
+    <section id="mini-prj-details">
+        <div class="prj-description">
+            <h2>Project Description</h2>
+                <p>
+                    This mini project is developed as part of an assignment of course COIS 3430: Web Development II: Server-side and Frameworks. The purpose of this mini project is 
+                    to write a sticky, self-processing PHP page that implements a game of paper, scissors, rock, where the user can play until they lose 10 times, and their number of 
+                    wins can be added to an arcade game style "high scores" table.
+                </p>
+
+                <p>
+                    For this mini project, there are 3 differen pages: Game Page, Game Over Page, and High Scores Page. 
+                </p>
+
+                <ol>
+                    <li>
+                        <p><strong>Game Page</strong></p>
+                        <div>
+                            <ul>
+                                <li>
+                                    The game page will show the current game number, the users number of wins and losses so far, 
+                                    a place for a feedback message, a button/link allowing them to start again, and the form containing 
+                                    paper/scissors/rock buttons that allows for game interaction.
+                                </li>
+                                
+                                <li>
+                                    Each time a choice is submitted, the program will randomly choose paper/scissors/rock, and determine if the user has won or lost.
+                                </li>
+                                
+                                <li>
+                                    It will update the appropriate sessions variables for wins/losses/game number, and output a message with the game number, 
+                                    the computers choice, the users choice, and an indicator if this means the user won or lost.
+                                </li>
+
+                                <li>
+                                    If the user has lost 10-times they should be directed to the Game Over page.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Game Over Page</strong></p>
+                        <div>
+                            <ul>
+                                <li>
+                                    This page will indicate to the user that their game is over. It will give them an option to enter their name and email to save their score to the high scores table. 
+                                </li>
+                                
+                                <li>
+                                    This should also be a self-processing form, and on submission, should validate the name and email, and then write the users name, email and score to the database. 
+                                </li>
+                                
+                                <li>
+                                    It should then redirect the user to the High Scores page.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>High Scores Page</strong></p>
+                        <div>
+                            <ul>
+                                <li>
+                                    The high scores page should display the top 20 scores and names (but not email) in the database, nicely formatted in descending order.
+                                    It should also provide a link where the user can play again. 
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+                <img src="./assets/project_look2.png" alt="Project HomePage look" class="prj-img">
+        </div>
+
+        <div class="prj-techniques">
+            <h2>Project Techniques</h2>
+            <ul>
+                <li>PHP</li>
+                <li>CSS</li>
+                <li>HTML</li>
+            </ul>
+        </div>
+
+        <div class="prj-source-code">
+            <h2>Project Source Code</h2>
+            <ul>
+                <li>
+                    <a 
+                        onclick="window.open('./assets/MiniProject.pdf')"
+                    >Multiple Choice Quiz Mini Project Code Snippets</a>
+                </li>
+            </ull>
+            
+        </div>
+
+        <div class="prj-demo">
+            <h1>Project Screenshots/ Video Demo</h1>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
