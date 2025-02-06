@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLand: Project Overview</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
+</head>
+<body>
+    <nav id="prj-details">
+        <div class="name">MovieLand Browsing Site</div>
+        <div class="home">
+            <img 
+                src="./assets/home.png" 
+                alt="home-icon" 
+                class="icon" 
+                onclick="location.href='./index.html'"
+            />
+        </div>
+    </nav>
+
+    <section id="prj-details">
+        <div class="prj-description">
+            <h2>Project Description</h2>
+                <p>
+                    This project is a React-based simple movie browsing site developed as part of university course - COIS 3430: Web Development II: Server-side and Frameworks, and was divided into 2 assignments accomplished througout the Fall semester 2024.
+                    Both assignments were built individually under course's instructor and teaching assistant guidance.
+                </p>
+                <p>
+                    Assignment 2 of the course focuses on building backend API to handle endpoints routing, create database tables, along with self-processing PHP pages for authentication, creating account, viewing account information, regenerating API key if requested.
+                    Assignment 3 of the course focuses on building a React Front-end to make use of the API from assignment 2, allowing users to do things as mentioned below.
+                </p>
+                <img src="./assets/project_look.png" alt="Project HomePage look" class="prj-img">
+        </div>
+
+        <div class="prj-functionalities">
+            <h2>Key Features & Functionalities</h2>
+            <ul>
+                <li>Users are able to see all movies in the catalogue (movies data provided by the instructors).</li>
+                <li>Users are able to see more details of a specific movie.</li>
+                <li>Users are able to filter movies be released year.</li>
+                <li>Users are able to search for a specific movie.</li> 
+                <li>Users are able to add a movie to “To Watch List”, with default priority is 5.</li>
+                <li>Users are able to see all movies in their “To Watch List” sorted by priority.</li>
+                <li>Users are able to update priority of a movie in the “To Watch List”.</li>
+                <li>Users are able to mark a movie as watched (which will remove the movie from “To Watch List” and move to “Completed List”).</li>
+                <li>Users are able to add score to a movie in their “Completed List”.</li>
+                <li>Users are able to see all movies in the “Completed List” sorted by date last watched.</li>
+                <li>Users are able to update the number of times they have watched a movie on their “Completed List” if they've watched it again.</li>
+                <li>Users are able to remove a movie from their “To Watch List” even if they don't plan to watch it anymore or they add it by mistake.</li>
+                <li>Users can view their watching statistics including total movies watched, total watch times, average rating for the movies they have rated, number of movies plan to watch.</li>
+            </ul>
+        </div>
+
+        <div class="prj-challenges">
+            <h2>Project Challenges</h2>
+            <p>
+                For assignment 2, before the assignment, we had a lab to practice the same task with less endpoints and much smaller database but it already had a significant amount of code repititions.
+                When it came to this assignment, there are a large number of smaller tasks to be completed, more endpoints to be tested, as well as repititions to be reduced. 
+                Therefore, this is an assignment where good design choices are important to avoid repeating codes (validating API key for example).
+            </p>
+
+            <p>
+                For assignment 3, I encountered lots of difficulties with CORS header, which is needed in the JSON response in the API from assignment 2 in order to make API requests from local app. 
+                But with the help of my instructor, the problem was resolved as below. However, she also mentioned that this solution is not ideal when it comes to matter of security. So this might 
+                be what I still need to learn more to effectively resolve the problem.
+            </p>
+            <br>
+            <pre>
+                header("Content-Type: application/json; charset=UTF-8");
+                header("Access-Control-Allow-Origin: *");  
+                header("Access-Control-Allow-Methods: *");
+                header("Access-Control-Allow-Headers: *");
+            </pre>
+
+            <p>
+                Another challenge I encountered is that the columns for production companies and genre in the data for the movies table (provided by my instructor) contain JSON objects, 
+                which basically means the data isn't normalized, and cannot be used directly to filter the movies (by genre or production companies) or display in the movie details part. 
+                I know that I need to split that data out into its own tables (a genre table, and a movie_genre table for example) using a one-off script as she mentioned it in the Readme 
+                file of the assignment, but my problem is I don't know how to this because it wasn't part of the course. I tried to do it by following some instructions on Youtube as well 
+                as other online sources but still didn't work. So I skipped this part as the assignment had deadline and I didn't have enough time to keep trying. I'm still trying to figure out how to do this.
+            </p>
+        </div>
+
+        <div class="prj-techniques">
+            <h2>Project Techniques</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>React.js</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+            </ul>
+        </div>
+
+        <div class="prj-source-code">
+            <h2>Project Source Code</h2>
+            <ol>
+                <li>
+                    <a 
+                        onclick="window.open('./assets/3430assignment2.pdf')"
+                    >Assignment 2 Code Snippets</a>
+                </li>
+                <li>
+                    <a 
+                        onclick="window.open('./assets/3430assignment3.pdf')"
+                    >Assignment 3 Code Snippets</a>
+                </li>
+            </ol>
+            
+        </div>
+
+        <div class="prj-demo">
+            <h1>Project Screenshots/ Video Demo</h1>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
